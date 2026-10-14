@@ -14,6 +14,16 @@ const getFoods = async (search) => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
   return data.foods || [];
 };
+
+// metadata
+export const metadata = {
+  title:{
+
+    absolute: "Foods page",
+  },
+  description: "Best fast food restaurant in Noakhali",
+};
+
 const FoodsPage = async ({ searchParams }) => {
   const { search = "" } = await searchParams;
 
